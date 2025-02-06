@@ -49,7 +49,7 @@ fmt_human(char *out, uintmax_t num)
 	double	    scaled;
 	const char *prefix[] =
 #if FMT_HUMAN_NUMFMT == NUMFMT_IEC
-	{ "  ",
+	{ "B ",
 	  "Ki",
 	  "Mi",
 	  "Gi",
@@ -79,7 +79,8 @@ fmt_human(char *out, uintmax_t num)
 		scaled /= FMT_HUMAN_NUMFMT;
 
 	//bprintf(out, "%.1f %s", scaled, prefix[i]);
-	bprintf(out, "%*.*f %s", 5, 1, scaled, prefix[i]);
+//	bprintf(out, "%*.*f %s", 5, 1, scaled, prefix[i]);
+	bprintf(out, "%*.*f %s", 3, 0, scaled, prefix[i]);
 }
 
 int

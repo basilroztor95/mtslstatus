@@ -34,7 +34,7 @@ static struct arg_t args[] = {
 #endif
 // interval 0 is completely broken!
 //{ run_command,	            "%s",	"~/.scripts/volume.sh",       0,    	 END },
-//
+
 { run_command,		    " %s ",	"~/.scripts/internet.sh",     5 _SEC,	 END },
 { run_command,		    "| %s ",	"~/.scripts/usd.sh",          1 _HR,	 END },
 { cpu_perc,		    "| %s ",	NULL,		              1 _SEC,	 END },
